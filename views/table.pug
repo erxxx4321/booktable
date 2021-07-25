@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	.container-md.p-3
+		h1.text-center=title
+		table.table.container-md.table-hover
+			thead
+				tr
+					th(scope='col') Time
+					th(scope='col') No. of Person
+					th(scope='col') Name
+					th(scope='col') Contact
+			tbody
+			each item in items
+				tr
+					td=item.Time
+					td=item.Person
+					td=item.Name
+					td=item.Phone
