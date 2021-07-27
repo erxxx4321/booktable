@@ -18,7 +18,7 @@ router.post("/submit", (req, res) => {
 
 	connection.query(sql, (err, result) => {
 		if (err) throw err;
-		res.send("submited");
+		res.render("submit", { title: "Submit successful" });
 	});
 });
 

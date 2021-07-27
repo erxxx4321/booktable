@@ -1,24 +1,23 @@
 extends layout
 
 block content
-  .container-md.p-3
-    h1.text-center=title
-    form.row.g-3.justify-content-center.p-4(action='/submit' method='post')
-      .col-md-6
-        label.form-label Time(opening hours 11:00 AM to 8:00 PM)
-        input.form-control(type='time' name='time' min='11:00' max='8:00' placeholder='Time' value='11:00' step='1800' required='')
-      .col-md-6
-        label.form-label No. of Person
-        input.form-control(type='number' name='person' placeholder='No. of Person' min='1' max='20' required='')
-      .col-md-6
-        label.form-label Name
-        .row
-          .col
-            input.form-control(name='firstName' type='text' placeholder='First name' aria-label='First name' required='')
-          .col
-            input.form-control(name='lastName' type='text' placeholder='Last name' aria-label='Last name' required='')
-      .col-md-6
-        label.form-label Contact
-        input.form-control(type='tel' pattern='[0-9]{4}-[0-9]{3}-[0-9]{3}' name='phone' placeholder='0000-000-000' required='')
-      .col-12
-        button#submit.btn.btn-primary(type='submit') Submit form
+	h1.text-center=title
+	form.row.g-3.justify-content-center.p-4(action='/submit' method='post')
+		.col-md-6
+			label.form-label Time (opening hours 11:00 AM to 8:00 PM)
+			input.form-control(type='time' name='time' min='11:00' max='8:00' placeholder='Time' value='11:00' step='1800' required='')
+		.col-md-6
+			label.form-label No. of Person
+			input.form-control(type='number' name='person' placeholder='No. of Person' min='1' max='20' required='')
+		.col-md-6
+			label.form-label Name
+			.row
+				.col
+					input.form-control(name='firstName' type='text' placeholder='First name' aria-label='First name' required='')
+				.col
+					input.form-control(name='lastName' type='text' placeholder='Last name' aria-label='Last name' required='')
+		.col-md-6
+			label.form-label Contact
+			input.form-control(type='tel' pattern='[0-9]{4}-[0-9]{3}-[0-9]{3}' name='phone' placeholder='0000-000-000' required='')
+		.col-12
+			button#submit.btn.btn-primary(type='submit') Submit form
