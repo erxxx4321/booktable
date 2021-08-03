@@ -1,18 +1,21 @@
 extends layout
 
 block content
-	h1.text-center.m-3=title
-	table.table.container-md.table-hover
-		thead
-			tr
-				th(scope='col') Time
-				th(scope='col') No. of Person
-				th(scope='col') Name
-				th(scope='col') Contact
-		tbody
-		each item in items
-			tr
-				td=item.Time
-				td=item.Person
-				td=item.Name
-				td=item.Phone
+	.container-md.p-3
+		header.p-3.text-center
+			h1=title
+			p.lead=date
+		table.table.container-md.table-hover
+			thead
+				tr
+					th(scope='col') Time
+					th(scope='col') No. of Persons
+					th(scope='col') Name
+					th(scope='col') Contact
+			tbody
+			each item in items
+				tr
+					td=item.Time
+					td=item.Person
+					td=item.Name
+					td=item.Phone
